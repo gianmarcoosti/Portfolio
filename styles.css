@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #3498db;
+    background-color: #ffffff;
 }
 
 h1 {
