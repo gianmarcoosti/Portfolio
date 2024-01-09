@@ -1,598 +1,112 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta property='og:title' content='' />
-  <meta property='og:image' content='' />
-  <link rel="icon" type="image/x-icon" href="/static/imgs/favicon.ico">
-  <meta property='og:description'
-    content='Create your online Data Science Portfolio and get inspired by Data Science Projects.' />
-
-    <meta property='og:url' content='https://www.datascienceportfol.io/dashboard'/>
-
-
-  </script> -->
-  <link href="styles.css" rel="stylesheet">
-
-
   
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ds_blue: '#002BFF', -> this has changed to 020AF5
-            ds_blue_light: '#EFF1FF',
-          },
-          screens: {
-        '2xl': '1600px',
-        '3xl': '2200px',
-      },
-        }
-      }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Data Science Portfolio</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white; /* Set the color of all text elements to white */
     }
-  </script>-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href=".css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-   -->
-  <title>Showcase your data science projects on a personal portfolio page and get inspired by our community’s projects.</title>
-
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-YT0T4V3FHG');
-  </script>-->
-
-
-   <script defer data-domain="datascienceportfol.io" src="https://plausible.io/js/script.js"></script>
-  </script> -->
-  <meta name="theme-color" content="#002BFF" />
-  
-  
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="8287b0a3-6b3f-4b61-80fb-b59984bc7225";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
-
-
-
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3645365,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
--->
-
-
-</head>
-
-
-
-<body class="antialiased text-gray-900" >
-
-  
-
-
-<div class="w-full bg-ds_blue h-[3px]"></div>
-<nav class="bg-white mx-auto max-w-7xl ">
-  <div class="w-full sm:px-6 px-4">
-    <div class="flex justify-between h-14">
-      <div class="flex">
-
-        <div class="flex-shrink-0 flex items-center">
-    <a href="/" class="font-mono  sm:text-base text-sm">
-        <span class="text-ds_blue text-opacity-50">datascience</span><span class="text-ds_blue">portfol.io/</span><span class="text-ds_blue  sm:inline hidden"></span></a>
-  </div>   
-
-
-      </div>
-      <div class="items-center hidden md:flex">
-
-        <div class="flex-shrink-0">
-
-          <a href="/" class="flex font-normal font-mono items-center px-4 py-2 mt-0 text-sm font-sm text-gray-900 hover:text-gray-600">Home
-          </a>
-
-        </div>
-
-
-
-
-          <a href="/" class="flex font-mono items-center px-4 py-2 mt-0 text-sm font-sm text-gray-900 hover:text-gray-600">Resources
-          </a>
-
-        </div>-->
-
-
-        <div class="flex-shrink-0">
-
-          <a href="/data-science-projects/" class="flex font-mono items-center px-4 py-2 mt-0 text-sm font-sm text-gray-900 hover:text-gray-600">Explore projects
-          </a>
-
-        </div>
-
-
-
-                <div class="flex-shrink-0">
-          <a href="/dashboard"
-            class="flex font-mono items-center px-4 py-2 mt-0 rounded-full text-sm font-sm bg-ds_blue text-white border border-white mx-2 hover:bg-opacity-80">Portfolio builder
-          </a>
-</div>
-
-
-
-        <div class="flex-shrink-0">
-          
-          <a href="/logout" class="flex font-mono items-center px-4 py-2 mt-0 text-sm font-sm text-gray-600">Logout</a>
-      
-
-
-
-        </div>
-
-
-       
-
-Create your portfolio
-          <a href="/register" class="flex items-center px-4 py-2 mt-0 rounded-full text-sm font-normal bg-white text-gray-900 ml-2">Create
-            your portfolio
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </a>
-
-
-        </div> -->
-
-      </div>
-      <div class="flex items-center md:hidden">
-        <div class="flex-shrink-0">
-          <a href="javascript:void(0);" onclick="showMenuLinks()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#020AF5"
-              stroke-width="1">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg></a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  
-  <div class="bg-ds_blue hidden h-screen w-screen pt-2" id="menuLinks">
-
-
-    <a href="/dashboard"  class="flex items-center py-2 sm:px-6 px-4 mt-0 text-lg  font-semibold text-white">Portfolio builder<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-      stroke="currentColor" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-    </svg></a>
-    <a href="/data-science-projects/" class="flex items-center py-2 sm:px-6 px-4 mt-0 text-lg font-semibold text-white">Explore projects</a>
     
-    <a href="/logout" class="flex items-center py-2 sm:px-6 px-4 mt-0 text-lg font-semibold text-white">Log out</a>
-     
-
-
-  </div>
-
-
-
-</nav>
-
-<script>
-  function showMenuLinks() {
-    var x = document.getElementById("menuLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-</script>
-
-
-<div class="flex justify-center bg-gray-50 py-0">
-    
-    
-            
-            
-    </div>
-
-
-
-
-
-    <h1 class="text-white font-bold text-4xl text-center leading-tight">Build your portfolio</h1>
-</div>
--->
-<p class="items-center flex text-xs text-ds_blue mt-6 mb-2 font-mono">Edit</p></div> -->
-
-<div class="overflow-x-scroll mt-8">
-    
-
-
-    <div class="bg-gray-100 flex justify-center items-center sm:mx-auto py-2 px-8 rounded-full sm:mt-0 w-fit mx-2 mb-2">
-    
-        <div class="flex space-x-8 font-normal text-md items-center">
-            Your portfolio link</span> -->
-
-            
-
-            <a href="/markuppopo" class="flex items-center font-mono text-gray-900 hover:underline-offset-4 hover:underline hover:text-ds_blue">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"></path><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"></path>
-                  </svg>
-
-                  
-                  datascienceportfol.io/markuppopo
-
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-
-            </a>
-            
-    
-        </div>
-    
-        
-    </div>
-
-
-
-    <div class="bg-gray-100 flex justify-center items-center sm:mx-auto py-2 px-8 rounded-full sm:mt-0 w-fit mx-2 mb-2">
-    
-        <div class="flex space-x-8 font-normal text-md items-center">
-            Your portfolio link</span> -->
-
-         
-
-
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.datascienceportfol.io/markuppopo" target="_blank" class="flex items-center font-mono text-gray-900 hover:underline-offset-4 hover:underline hover:text-ds_blue">
-           
-                
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M20 5.5a3.498 3.498 0 0 1-6.062 2.385l-5.112 3.021a3.498 3.498 0 0 1 0 2.188l5.112 3.021a3.5 3.5 0 1 1-.764 1.29l-5.112-3.02a3.499 3.499 0 1 1-3.843-5.642 3.499 3.499 0 0 1 3.843.872l5.112-3.021A3.5 3.5 0 1 1 20 5.5Zm-1.5 13a2 2 0 1 0-3.999-.001 2 2 0 0 0 3.999.001Zm0-13a2 2 0 1 0-3.999-.001A2 2 0 0 0 18.5 5.5ZM5.5 14a2 2 0 1 0 .001-3.999A2 2 0 0 0 5.5 14Z"></path></svg>
-
-
-                 Share on LinkedIn
-
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                  </svg>
-
-            </a>
-            
-    
-        </div>
-    
-        
-    </div>
-
-
-
-    
-
-    
-    
-    <div class="flex space-x-8 font-normal text-md items-center"><span class="font-mono text-ds_blue text-xs font-semibold">Edit</span>
-        <a href="/edit/profile/edit" class="flex items-center  text-gray-900 hover:underline-offset-4 hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 mr-1" fill="currentColor"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"></path></svg>
-            Profile
-        </a>
-        <a href="/edit/projects" class="flex items-center  text-gray-900 hover:underline-offset-4 hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-bottom w-4 h-4 mr-1" fill="currentColor"><path fill-rule="evenodd" d="M4.801 3.57A1.75 1.75 0 016.414 2.5h11.174c.702 0 1.337.42 1.611 1.067l3.741 8.828c.04.092.06.192.06.293v7.562A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25v-7.5c0-.1.02-.199.059-.291L4.8 3.571zM6.414 4a.25.25 0 00-.23.153L2.88 12H8a.75.75 0 01.648.372L10.18 15h3.638l1.533-2.628a.75.75 0 01.64-.372l5.13-.051-3.304-7.797a.25.25 0 00-.23-.152H6.414zM21.5 13.445l-5.067.05-1.535 2.633a.75.75 0 01-.648.372h-4.5a.75.75 0 01-.648-.372L7.57 13.5H2.5v6.75c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-6.805z"></path></svg>
-            Projects</a>
-            <a href="/edit/experience" class="flex items-center  text-gray-900 hover:underline-offset-4 hover:underline">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-bottom w-4 h-4 mr-1" fill="currentColor"><path fill-rule="evenodd" d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"></path></svg>
-                Experience</a>
-                
-                <a href="/edit/education" class="flex items-center  text-gray-900 hover:underline-offset-4 hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="align-bottom w-4 h-4 mr-1" fill="currentColor"><path fill-rule="evenodd" d="M12.292 2.06a.75.75 0 00-.584 0L.458 6.81a.75.75 0 000 1.38L4.25 9.793v3.803a2.901 2.901 0 00-1.327.757c-.579.58-.923 1.41-.923 2.43v4.5c0 .248.128.486.335.624.06.04.117.073.22.124.124.062.297.138.52.213.448.149 1.09.288 1.925.288s1.477-.14 1.925-.288c.223-.075.396-.15.52-.213a2.11 2.11 0 00.21-.117A.762.762 0 008 21.28v-4.5c0-1.018-.344-1.85-.923-2.428a2.9 2.9 0 00-1.327-.758v-3.17l5.958 2.516a.75.75 0 00.584 0l5.208-2.2v4.003a2.552 2.552 0 01-.079.085 4.057 4.057 0 01-.849.65c-.826.488-2.255 1.021-4.572 1.021-.612 0-1.162-.037-1.654-.1a.75.75 0 00-.192 1.487c.56.072 1.173.113 1.846.113 2.558 0 4.254-.592 5.334-1.23.538-.316.914-.64 1.163-.896a2.84 2.84 0 00.392-.482h.001A.75.75 0 0019 15v-4.892l4.542-1.917a.75.75 0 000-1.382l-11.25-4.75zM5 15c-.377 0-.745.141-1.017.413-.265.265-.483.7-.483 1.368v4.022c.299.105.797.228 1.5.228s1.201-.123 1.5-.228V16.78c0-.669-.218-1.103-.483-1.368A1.431 1.431 0 005 15zm7-3.564L2.678 7.5 12 3.564 21.322 7.5 12 11.436z"></path></svg>
-            Education</a>
-        
-  
-
-    </div>
--->
-    
-</div>
-
-
-
-
-</div>
-
-
-
-Portfolio preview</div> -->
-<div class="flex flex-row justify-center items-center py-8 px-4">
-    
-    <div class="border border-gray-400 rounded-xl bg-white max-w-7xl w-full shadow-xl shadow-gray-200">
-        <div class="w=full bg-gray-50 p-2 m-2 rounded-lg">
-            <p class="flex text-gray-600 justify-center items-center font-normal">
-                <span class="text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </span>
-                <a href="/markuppopo" class="hover:underline-offset-4 hover:underline">datascienceportfol.io/markuppopo</a>
-            </p>
-        </div>
-        <div class="p-0 border-t border-gray-100 rounded-b-xl overflow-auto">  -->
-            
-            
-            
-         
-
-</div> -->
-
-<div class="md:flex md:gap-0 max-w-7xl mx-auto"> 
-    
-    
-    
-
-
-<div>
-
-
-
-<div class="md:flex-none md:w-96 bg-gray-50 md:h-fit sm:p-6 p-4 md:sticky  sm:rounded-b-3xl ">
-
-    <div>
-
-        
-        
-
-    
-        <div class=" flex items-center justify-end">
-        <a href="/edit/profile/edit" class="flex items-center text-ds_blue bg-gray-100 rounded-full text-sm px-3 py-1  hover:underline-offset-4 hover:underline">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="flex w-4 h-4 mr-1" width="16" height="16" fill="currentColor">
-                <path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z">
-                </path>
-            </svg>
-            
-            Edit profile</a> 
-    
-  
-    
-    
-    </div>
-    
-    </div>
-
-
-
-
-    <div> <img class="mb-4 mt-2 h-20 w-20 rounded-full lg:w-24 lg:h-24"  style="object-fit:cover;"
-            src="/static/profile_pics/default.jpg" alt="">
-    </div>
-
-    
-
-    <p class="text-2xl font-semibold mb-1">mark uppopopop</p>
-    <p class="text-sm text-gray-900 mb-1"></p>
-    
-    
-    <div class="flex text-gray-600 mt-4 items-center">
-
-        
-        
-        
-        
-        
-       
-    </div>
-
-    
-
-    
-
-</div>
-</div>
-
-    
-    <div class="w-full"> 
-        <div class="p-6">  
-            
-        
-
-
-
-
-<div>
-
-    <div class="grid grid-cols-2">
-    <div>
-<p class="flex text-xs text-gray-600 pt-0 pb-0 font-mono">Projects</p>
-</div>
-    
-   
-
-
-</div>
-
-</div>
-
-
-
-<a href="/edit/projects/new"><div class="mb-6 profile_group mt-2 text-gray-600 border w-full sm:h-40 h-32 rounded-xl  border-gray-300 border-dashed grid place-items-center  hover:bg-ds_blue_light hover:underline hover:underline-offset-4">
-<div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="mr-2"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg>
-Add your first project
-</div>
-</div></a>
-
-
-
-
-
-
-
-
-
-<div>
-
-    <div class="grid grid-cols-2 mt-2mb-2">
-    <div>
-        
-<p class="flex text-xs text-gray-600 pt-0 pb-0 font-mono">Experience</p>
-
-    
-    </div>
-    
-   
-
-
-</div>
-
-</div>
-
-
-
-
-
- 
-<a href="/edit/experience/new"><div class=" mb-6 profile_group mt-2 text-gray-600 border w-full rounded-xl sm:h-40 h-32 border-gray-300 border-dashed grid place-items-center hover:bg-ds_blue_light hover:underline hover:underline-offset-4">
-    <div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="mr-2"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg>
-    Add your experience
-    </div>
-    </div></a>
-
-
-
-
-
-
-
-<div>
-
-    <div class="grid grid-cols-2 mt-2mb-2">
-    <div>
-        
-<p class="flex text-xs text-gray-600 pt-0 pb-0 font-mono">Education</p>
-
-    
-    </div>
-    
-   
-
-
-</div>
-
-</div>
-
-
- 
-<a href="/edit/education/new"><div class=" mb-6  profile_group mt-2 mb-6 text-gray-600 border w-full rounded-xl sm:h-40 h-32 border-gray-300 border-dashed grid place-items-center  hover:bg-ds_blue_light hover:underline hover:underline-offset-4">
-    <div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="mr-2"><path d="M12.75 7.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"></path><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"></path></svg>
-    Add your education
-    </div>
-    </div></a>
-
-
-
-</div>
-
-
-
-
-<style>
-    .tooltip {
-      position: relative;
+    .container {
       display: flex;
     }
     
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      opacity: 0;
-  transition: opacity 0.5s;
-  
-  position: absolute;
-  z-index: 1;
-  top: -20px;
-  left: 110%;
+    .fixed-column {
+      flex: 1;
+      position: fixed;
+      height: 100vh;
+      width: 25%;
+      padding: 20px;
+      border: none;
+      background-color: transparent;
+    }
     
-      /* Position the tooltip */
+    .content {
+      flex: 3;
+      margin-left: 25%;
+      padding: 20px;
+      padding-top: 100px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+      position: relative; /* Add position relative for pseudo-element */
+    }
+    
+    .section::after {
+      content: "";
       position: absolute;
-      z-index: 1;
+      bottom: 0;
+      left: 20px; /* Set left margin */
+      right: 20px; /* Set right margin */
+      height: 1px;
+      background-color: white;
     }
     
-    
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-
+    .navigation {
+      position: fixed;
+      top: 20px;
+      right: 20px;
     }
-
-
-
-    </style>
-
-
-        </div>
-
+    
+    .navigation a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: white; /* Set the color of navigation links to white */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="fixed-column">
+      <h1>Gianmarco Osti</h1>
+      <img src="your_picture.jpg" alt="Profile Picture" width="150">
+      <table>
+        <tr>
+          <td><a href="https://www.linkedin.com/"><img width="60" height="60"src="https://vectorwiki.com/images/NNbMO__linkedin-logo-2013.svg" alt="LinkedIn"></a></td>
+          <td><a href="https://www.github.com/"><img width="60" height="40"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZL4PCICkngpU6qkROLlHEVY2ENf4gaptAtw&usqp=CAU" alt="GitHub"></a></td>
+          <!-- Add more social links here -->
+        </tr>
+      </table>
+      <p>Email: your_email@example.com</p>
+      <p><a href="your_resume.pdf"><img width="40" height="40" src="https://cdn-icons-png.flaticon.com/128/9272/9272965.png" alt="Resume"> Download Resume</a></p>
+    </div>
+    <div class="content">
+      <div id="home" class="section">
+        <h2>Home</h2>
+        <!-- Add content for home section here -->
       </div>
-  
+      <div id="projects" class="section">
+        <h2>Projects</h2>
+        <!-- Add content for projects section here -->
+      </div>
+      <div id="about" class="section">
+        <h2>About</h2>
+        <!-- Add content for about section here -->
+      </div>
+      <div id="contact" class="section">
+        <h2>Contact</h2>
+        <!-- Add content for contact section here -->
+      </div>
+    </div>
   </div>
   
-
-        </div>
-    </div>
-</div>
-
-
-
-<div class="w-full bg-ds_blue sm:px-6 px-4 py-6">
-    <div class="max-w-7xl mx-auto">
-        <div class="py-4">
-            
-        <nav class=" text-sm" aria-label="quick links">
-
-            
-                <span
-                    class="flex inline-block rounded-lg py-1 px-2 text-sm text-white"
-                    href="/#features">Made with <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mx-1">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                      </svg> 
-                       in London by&nbsp;<a
-                            class="hover:underline hover:underline-offset-4"
-                            href="https://www.linkedin.com/in/pasqualeclaudiobruno/" target="_blank">Pasquale Bruno</a></span>
-                        </div>
-
-                         -->
-
-                        <div class="my-2 flex justify-center gap-x-6"><a
-                            class="inline-block rounded-lg py-1 px-2 text-sm text-white text-opacity-80 flex hover:text-white hover:underline hover:underline-offset-4"
-                            href="https://www.linkedin.com/in/pasqualeclaudiobruno/" target="_blank">Created by Pasquale Bruno - follow me on <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
-                     </svg></a>
-
-                     
-                                </div>
-
-                           
-        </nav>
-    </div>
- 
-    </div>
-</div>
-
-
-
+  <div class="navigation">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </body>
-
-
-
 </html>
