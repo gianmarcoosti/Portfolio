@@ -1,7 +1,0 @@
-title: Gianmarco Osti
-#escription: [A short description of your site's purpose]
-show_downloads: true
-google_analytics: [Your Google Analytics tracking ID]
-remote_theme: pages-themes/slate@v0.2.0
-plugins:
-theme: jekyll-theme-slate
