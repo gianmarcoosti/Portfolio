@@ -1,114 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="styles.css">
-  
-  <title>Data Science Portfolio</title>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: white; /* Set the color of all text elements to white */
-      background-color: black;
-    }
-    
-    .container {
-      display: flex;
-    }
-    
-    .fixed-column {
-      flex: 1;
-      position: fixed;
-      height: 100vh;
-      width: 25%;
-      padding: 20px;
-      border: none;
-      background-color: transparent;
-    }
-    
-    .content {
-      flex: 3;
-      margin-left: 25%;
-      padding: 20px;
-      padding-top: 100px;
-    }
-    
-    .section {
-      margin-bottom: 40px;
-      position: relative; /* Add position relative for pseudo-element */
-    }
-    
-    .section::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 20px; /* Set left margin */
-      right: 20px; /* Set right margin */
-      height: 1px;
-      background-color: white;
-    }
-    
-    .navigation {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-    }
-    
-    .navigation a {
-      margin-right: 10px;
-      text-decoration: none;
-      color: white; /* Set the color of navigation links to white */
-      font-weight: bold;
-    }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <div class="fixed-column">
-      <h1>Gianmarco Osti</h1>
-      <img src="your_picture.jpg" alt="Profile Picture" width="150">
-      <table>
-        <tr>
-          <td><a href="https://www.linkedin.com/"><img width="60" height="60"src="https://vectorwiki.com/images/NNbMO__linkedin-logo-2013.svg" alt="LinkedIn"></a></td>
-          <td><a href="https://www.github.com/"><img width="60" height="40"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZL4PCICkngpU6qkROLlHEVY2ENf4gaptAtw&usqp=CAU" alt="GitHub"></a></td>
-          <!-- Add more social links here -->
-        </tr>
-      </table>
-      <p>Email: your_email@example.com</p>
-      <p><a href="your_resume.pdf"><img width="40" height="40" src="https://cdn-icons-png.flaticon.com/128/9272/9272965.png" alt="Resume"> Download Resume</a></p>
+
+<body> 
+  <div class="md:flex md:gap-0 max-w-7xl mx-auto">
+      <div class="md:flex-none md:w-96 bg-grey-50 sm:p-6 p-4 rounded-x1">
+        <div>
+            <img class="mb-4 mt-0 h-20 w-20 rounded-full lg:w-24 lg:h-24" style="object-fit:cover;" src="your_picture.jpg" alt="Profile Picture">
+          </div>
+          <p class="text-2x1 font-semibold mb-1">Gianmarco Osti</p>
+          <p class="text-sm text-gray-900 mb-1">Data Analyst & Biotechnician</p>
+          <p class="text-xs text-gray-600"> Based in Venice, Italy (remote)</p>
+          <div class="text-gray-600 mt-4 items-center">
+            <a href="https://www.linkedin.com/in/gianmarco-osti/"><img width="50" height="40"src="https://vectorwiki.com/images/NNbMO__linkedin-logo-2013.svg" alt="LinkedIn"></a>
+            <!-- conditions to make sure the link works -->
+            <a href=https://github.com/gianmarcoosti><img width="50" height="40"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZL4PCICkngpU6qkROLlHEVY2ENf4gaptAtw&usqp=CAU" alt="GitHub"></a>
+            <!-- conditions to make sure the link works -->
+            <a href="https://mailto:ostigianmarco@gmail.com" class="text-gray-600 hover:text-ds_blue mr-0" target="_blank">
+              <button class="px-1 py-0 mt-0 rounded-full text-xs font-sm border-gray-600 border text-gray-600 hover:text-ds_blue mr-0 hover:border-ds_blue mr-1.5  ">
+                email me</button>
+            </a>
+          </div>
+          <div>
+              <p class="text-xs text-gray-600 sm:mt-12 mt-8 mb-2 font-mono">About</p>
+              <p class="text-ss text-gray-900 mb-10">"I am a Data Analyst who loves using data to make informed decisions. I am passionate about using data to solve real-world problems, and I am excited to continue my journey as a data analyst."
+              </p>
+            </div>
+            <p class="text-xs text-gray-600 sm:mt-12 mt-8 mb-2 font-mono">Skills</p>
+            <!--            -->
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">SQL
+            </button>
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">Excel
+            </button> 
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">Tableau
+            </button>
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">Data Visualization
+            </button>
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">R
+            </button>
+            <button class="px-2 py-1 rounded-full text-xs font-sm bg-ds_white text-ds_black mr-1 mb-1">PowerBi
+            </button>
+        </div>
     </div>
-    <div class="content">
-      <div id="home" class="section">
-        <h2>Home</h2>
-        Ornella bella
-        <!-- Add content for home section here -->
-      </div>
-      <div id="projects" class="section">
-        <h2>Projects</h2>
-        <!-- Add content for projects section here -->
-      </div>
-      <div id="about" class="section">
-        <h2>About</h2>
-        <!-- Add content for about section here -->
-      </div>
-      <div id="contact" class="section">
-        <h2>Contact</h2>
-        <!-- Add content for contact section here -->
+  <div class="sm:p-6 p-4">
+   <div>
+    <!-- Projects -->
+    <p class="text-xs text-gray-600 pt-0 pb-0 font-mono">Projects</p>
+    <div class="grid mt-2 lg:grid-cols-2 gap-6">
+      <div class="">
+        <a href="/gianmarcoosti/projects/0" class="group">
+          <img class="w-full mb-2 rounded-xl border border-gray-200 shadow-sm shadow-gray-50" src="/static/profile_pics/pr0_9C330DCCE8C4550ABBC1.jpg" alt="Project photo">
+          <p class="text-md text-gray-900 mb-1 mt-2 font-semibold group-hover:underline group-hover:underline-offset-4">Covid-19 Global Vaccination Tracker</p>
+          <div>
+            <button class="px-2 py-0.5 rounded-full text-xs font-sm bg-ds_blue_light text-ds_blue mr-1 mb-1"> Tableau </button>
+            <button class="px-2 py-0.5 rounded-full text-xs font-sm bg-ds_blue_light text-ds_blue mr-1 mb-1"> Data Visualization </button>
+            <button class="px-2 py-0.5 rounded-full text-xs font-sm bg-ds_blue_light text-ds_blue mr-1 mb-1"> Statistics </button>
+          </div>
+          <p class="text-sm text-gray-600 mb-1 mt-2">Tableau dashboards showing key metrics and insights around the performance of the Covid-19 global vaccination program. Updated on a daily basis based on government datasets.</p>
+        </a>
       </div>
     </div>
-  </div>
-  
-  <div class="navigation">
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
   </div>
 </body>
 </html>
