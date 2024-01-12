@@ -2,8 +2,8 @@
 
 ### Data Analyst/Programming Enthusiast
 
-- 🔭 I’m currently working on: __DevOps & Site Reliability Engineering__ 
-- 🌱 I’m currently learning: __Blockchain, Solidity Programming, Go__
+- 🔭 I’m currently working on:
+- 🌱 I’m currently learning: 
 - 👯 I’m looking to collaborate on biostatistics research
 - ⚡ Fun fact: I can solve a Rubik's cube in under 20 seconds :D
   
