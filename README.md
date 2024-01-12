@@ -14,14 +14,10 @@
 <table>
     <tr>
         <th>My Website</th>
-        <th>My CV</th>
     </tr>
     <tr>
         <td>
             <a href="https://gianmarcoosti.github.io/gianmarcoosti/">🌐</a>
-        </td>
-        <td>
-            <a href="">📃</a>
         </td>
     </tr>
 </table>
