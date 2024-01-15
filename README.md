@@ -2,8 +2,8 @@
 
 ### Data Analyst/Programming Enthusiast
 
-- 🔭 I’m currently working on:
-- 🌱 I’m currently learning: 
+- 🔭 I’m currently working on: Data analyst capstone project
+- 🌱 I’m currently learning: Machine Learning and LLM
 - 👯 I’m looking to collaborate on biostatistics research
 - ⚡ Fun fact: I can solve a Rubik's cube in under 20 seconds :D
   
