@@ -17,7 +17,7 @@
     </tr>
     <tr>
         <td>
-            <a href="https://gianmarcoosti.github.io/gianmarcoosti/">🌐</a>
+            <a href="https://gianmarcoosti.github.io/Portfolio/">🌐</a>
         </td>
     </tr>
 </table>
