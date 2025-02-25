@@ -4442,7 +4442,7 @@ td:last-child {
     }
 }
 
-/* Custom CSS for the two-column layout */
+/* Two-Column Layout */
 .two-column-layout {
     display: flex;
     gap: 20px; /* Space between columns */
@@ -4460,7 +4460,7 @@ iframe {
     border: none;
 }
 
-/* Optional: Responsive design for mobile devices */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .two-column-layout {
         flex-direction: column; /* Stack columns vertically */
