@@ -4441,3 +4441,31 @@ td:last-child {
         right: -2rem;
     }
 }
+
+/* Custom CSS for the two-column layout */
+.two-column-layout {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    margin-top: 20px;
+}
+.left-column {
+    flex: 1; /* Takes up 1 part of the available space */
+}
+.right-column {
+    flex: 2; /* Takes up 2 parts of the available space */
+}
+iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+/* Optional: Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column; /* Stack columns vertically */
+    }
+    .left-column, .right-column {
+        flex: 1; /* Reset flex to take full width */
+    }
+}
