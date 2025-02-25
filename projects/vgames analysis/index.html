@@ -5,45 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Games Sales Analysis</title>
     <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Custom CSS for the two-column layout */
-        .two-column-layout {
-            display: flex;
-            gap: 20px; /* Space between columns */
-            margin-top: 20px;
-        }
-        .left-column {
-            flex: 1; /* Takes up 1 part of the available space */
-        }
-        .right-column {
-            flex: 2; /* Takes up 2 parts of the available space */
-        }
-        iframe {
-            width: 100%;
-            height: 800px;
-            border: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your existing CSS -->
 </head>
 <body>
     <header class="s-header">
-        <div class="row s-header__inner">
-            <div class="s-header__block">
-                <div class="s-header__logo">
-                    <a class="logo" href="../../index.html">
-                        <img src="../../images/logo.png" alt="Gianmarco Osti Portfolio Logo">
-                    </a>
-                </div>
-                <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-            </div>
-            <nav class="s-header__nav">    
-                <ul class="s-header__menu-links">
-                    <li><a href="../../index.html#intro">Home</a></li>
-                    <li><a href="../../index.html#works">Projects</a></li>
-                </ul>    
-            </nav>
-        </div>
+        <!-- Header content here -->
     </header>
 
     <main>
@@ -51,72 +17,62 @@
             <div class="row">
                 <div class="column xl-12">
                     <h1>Video Games Sales Analysis</h1>
-                    <p>
-                        This project analyzes video game sales trends over the years, focusing on platform performance, regional sales, and genre popularity.
-                        The dataset includes historical sales data for video games across multiple platforms.
-                    </p>
+                    <p>This project analyzes video game sales trends over the years.</p>
                 </div>
             </div>
         </section>
 
-        <section class="s-project-overview">
-            <div class="row">
-                <div class="column xl-12">
-                    <h2>Project Overview</h2>
-                    <ul>
-                        <li><strong>Dataset:</strong> Video Game Sales (from Kaggle).</li>
-                        <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib, Seaborn.</li>
-                        <li><strong>Key Metrics:</strong> Global Sales, Regional Sales (NA, EU, JP, Other), Platform Performance, Genre Popularity.</li>
-                        <li><strong>Visualizations:</strong> Bar charts, Pie charts, Line graphs, Heatmaps.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- Two-Column Layout -->
+        <div class="two-column-layout">
+            <!-- Left Column: Overview and Insights -->
+            <div class="left-column">
+                <section class="s-project-overview">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Project Overview</h2>
+                            <ul>
+                                <li><strong>Dataset:</strong> Video Game Sales.</li>
+                                <li><strong>Tools Used:</strong> Python, Pandas, Matplotlib.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="s-project-insights">
-            <div class="row">
-                <div class="column xl-12">
-                    <h2>Key Insights</h2>
-                    <ul>
-                        <li>Identified the top-selling platforms and genres globally.</li>
-                        <li>Analyzed regional sales trends (North America, Europe, Japan, Others).</li>
-                        <li>Visualized the correlation between critic scores and sales.</li>
-                        <li>Explored the decline of certain platforms over time.</li>
-                    </ul>
-                </div>
+                <section class="s-project-insights">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Key Insights</h2>
+                            <ul>
+                                <li>Top-selling platforms and genres.</li>
+                                <li>Regional sales trends.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
 
-        <section class="s-project-resources">
-            <div class="row">
-                <div class="column xl-12">
-                    <h2>Interactive Notebook</h2>
-                   <iframe src="https://www.kaggle.com/embed/gianmarcoosti/videogames-sales-analysis?kernelSessionId=224488492" 
-                       height="800" 
-                       style="margin: 0 auto; 
-                       width: 100%; 
-                       max-width: 950px;" 
-                       frameborder="0" 
-                       scrolling="auto" 
-                       title="Videogames Sales Analysis">
-                    </iframe>
-                </div>
+            <!-- Right Column: Interactive Notebook -->
+            <div class="right-column">
+                <section class="s-project-resources">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Interactive Notebook</h2>
+                            <iframe
+                                src="https://www.kaggle.com/embed/gianmarcoosti/videogames-sales-analysis?kernelSessionId=123456789"
+                                title="Video Games Sales Analysis">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="s-footer">
-        <div class="row">
-            <div class="column xl-12">
-                <p>&copy; <span id="current-year"></span> Gianmarco Osti. All rights reserved.</p>
-            </div>
-        </div>
+        <!-- Footer content here -->
     </footer>
 
     <script src="../../js/plugins.js"></script>
     <script src="../../js/main.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
