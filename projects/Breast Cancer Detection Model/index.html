@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breast Cancer Detection</title>
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header class="s-header">
@@ -13,7 +13,7 @@
             <div class="s-header__block">
                 <div class="s-header__logo">
                     <a class="logo" href="../../index.html">
-                        <img src="../../images/logo.png" alt="Homepage">
+                        <img src="/images/logo.png" alt="Gianmarco Osti Portfolio Logo">
                     </a>
                 </div>
                 <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
@@ -27,33 +27,49 @@
         </div>
     </header>
 
-    <main class="s-project">
-        <div class="row">
-            <div class="column xl-12">
-                <h1>Breast Cancer Detection</h1>
-                <p>
-                    This project focuses on building a machine learning model to detect breast cancer using the Wisconsin Diagnostic Breast Cancer (WDBC) dataset. 
-                    The goal is to classify tumors as malignant or benign based on features like radius, texture, and symmetry.
-                </p>
+    <main 
+       <section  class="s-project">
+            <div class="row">
+                <div class="column xl-12">
+                    <h1>Breast Cancer Detection</h1>
+                    <p>
+                        This project focuses on building a machine learning model to detect breast cancer using the Wisconsin Diagnostic Breast Cancer (WDBC) dataset. 
+                        The goal is to classify tumors as malignant or benign based on features like radius, texture, and symmetry.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                <h2>Project Overview</h2>
-                <ul>
-                    <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
-                    <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn.</li>
-                    <li><strong>Algorithms:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
-                    <li><strong>Key Metrics:</strong> Accuracy, Precision, Recall, F1-Score.</li>
-                </ul>
+        <section class="s-project-overview">
+            <div class="row">
+                <div class="column xl-x2">
+                    <h2>Project Overview</h2>
+                    <ul>
+                        <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
+                        <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn.</li>
+                        <li><strong>Algorithms:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
+                        <li><strong>Key Metrics:</strong> Accuracy, Precision, Recall, F1-Score.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                <h2>Key Insights</h2>
-                <ul>
-                    <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
-                    <li>Identified the most important features for classification (e.g., radius, texture).</li>
-                    <li>Visualized the distribution of malignant and benign tumors.</li>
-                </ul>
+        <section class="s-project-insights">
+            <div class="row">
+                <div class="column xl-12">
+                    <h2>Key Insights</h2>
+                    <ul>
+                        <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
+                        <li>Identified the most important features for classification (e.g., radius, texture).</li>
+                        <li>Visualized the distribution of malignant and benign tumors.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
                 <h2>Code and Resources</h2>
                 <p>
-                    <a href="https://www.kaggle.com/code/gianmarcoosti/breast-cancer-detection?scriptVersionId=224297994" target="_blank">View on Kaggle</a>
+                    <a href="https://www.kaggle.com/code/gianmarcoosti/breast-cancer-detection?scriptVersionId=224297994" target="_blank" rel="noopener noreferrer">View on Kaggle</a>
                 </p>
             </div>
         </div>
@@ -62,7 +78,10 @@
     <footer class="s-footer">
         <div class="row">
             <div class="column xl-12">
-                <p>&copy; 2023 Gianmarco Osti. All rights reserved.</p>
+                <p>&copy; 2025 Gianmarco Osti. All rights reserved.</p>
+                <script>
+                    document.getElementById('current-year').textContent = new Date().getFullYear();
+                </script>
             </div>
         </div>
     </footer>
