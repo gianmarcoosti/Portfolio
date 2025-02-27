@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breast Cancer Detection</title>
+    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,10 +24,10 @@
                     <li><a href="smoothscroll" href="../../index.html#works">Projects</a></li>
                 </ul>    
             </nav>
-        </div>
+        </div><!-- Header content here -->
     </header>
     <main>
-       <section  class="s-project">
+        <section class="s-project">
             <div class="row">
                 <div class="column xl-12">
                     <h1>Breast Cancer Detection</h1>
@@ -38,55 +39,61 @@
             </div>
         </section>
 
-        <section class="s-project-overview">
-            <div class="row">
-                <div class="column xl-x2">
-                    <h2>Project Overview</h2>
-                    <ul>
-                        <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
-                        <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn.</li>
-                        <li><strong>Algorithms:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
-                        <li><strong>Key Metrics:</strong> Accuracy, Precision, Recall, F1-Score.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- Two-Column Layout -->
+        <div class="two-column-layout">
+            <!-- Left Column: Overview and Insights -->
+            <div class="left-column">
+                <section class="s-project-overview">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Project Overview</h2>
+                            <ul>
+                                <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
+                                <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn</li>
+                                <li><strong>Key Metrics:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
 
-        <section class="s-project-insights">
-            <div class="row">
-                <div class="column xl-12">
-                    <h2>Key Insights</h2>
-                    <ul>
-                        <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
-                        <li>Identified the most important features for classification (e.g., radius, texture).</li>
-                        <li>Visualized the distribution of malignant and benign tumors.</li>
-                    </ul>
-                </div>
+                <section class="s-project-insights">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Key Insights</h2>
+                            <ul>
+                                <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
+                                <li>Identified the most important features for classification (e.g., radius, texture).</li>
+                                <li>Visualized the distribution of malignant and benign tumors.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
 
-        <section class="s-project-resources">
-            <div class="row">
-                <div class="column xl-12">
-                    <h2>Interactive Notebook</h2>
-                    <iframe src="https://www.kaggle.com/embed/gianmarcoosti/breast-cancer-detection?cellIds=137-171&kernelSessionId=224818904"
-                        height="500" style="margin: 0 auto; width: 100%; max-width: 950px;" 
-                        frameborder="0" 
-                        scrolling="auto" 
-                        title="Breast Cancer Detection">
-                    </iframe>
-                </div>
+            <!-- Right Column: Interactive Notebook -->
+            <div class="right-column">
+                <section class="s-project-resources">
+                    <div class="row">
+                        <div class="column xl-12">
+                            <h2>Interactive Notebook</h2>
+                            <iframe 
+                                src="https://www.kaggle.com/embed/gianmarcoosti/breast-cancer-detection?cellIds=137-171&kernelSessionId=224818904"
+                                height="500" style="margin: 0 auto; width: 100%; max-width: 950px;" 
+                                frameborder="0" 
+                                scrolling="auto" 
+                                title="Breast Cancer Detection">
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="s-footer">
-        <div class="row">
+     <div class="row">
             <div class="column xl-12">
                 <p>&copy; 2025 Gianmarco Osti. All rights reserved.</p>
-                <script>
-                    document.getElementById('current-year').textContent = new Date().getFullYear();
-                </script>
             </div>
         </div>
     </footer>
