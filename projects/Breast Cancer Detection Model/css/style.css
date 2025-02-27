@@ -4441,3 +4441,25 @@ td:last-child {
         right: -2rem;
     }
 }
+.two-column-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 1 1 60%; /* Takes 60% of the width */
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1 1 35%; /* Takes 35% of the width */
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        flex: 1 1 100%; /* Stack columns on smaller screens */
+    }
+}
