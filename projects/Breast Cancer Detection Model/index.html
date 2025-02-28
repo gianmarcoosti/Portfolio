@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breast Cancer Detection</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/style.css">
     <!-- Mermaid.js for rendering the flowchart -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <script>
@@ -23,200 +23,178 @@
             <div class="left-column">
                 <!-- Project Title -->
                 <section class="s-project-title">
-                    <div class="row">
-                        <div class="column xl-12">
-                            <h1>Breast Cancer Detection</h1>
-                            <p>
-                                This project focuses on building a machine learning model to detect breast cancer using the Wisconsin Diagnostic Breast Cancer (WDBC) dataset. 
-                                The goal is to classify tumors as malignant or benign based on features like radius, texture, and symmetry.
-                            </p>
-                        </div>
-                    </div>
+                    <h1>Breast Cancer Detection</h1>
+                    <p>
+                        This project focuses on building a machine learning model to detect breast cancer using the Wisconsin Diagnostic Breast Cancer (WDBC) dataset. 
+                        The goal is to classify tumors as malignant or benign based on features like radius, texture, and symmetry.
+                    </p>
                 </section>
 
                 <!-- Project Overview -->
                 <section class="s-project-overview">
-                    <div class="row">
-                        <div class="column xl-12">
-                            <h2>Project Overview</h2>
-                            <ul>
-                                <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
-                                <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn.</li>
-                                <li><strong>Key Metrics:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h2>Project Overview</h2>
+                    <ul>
+                        <li><strong>Dataset:</strong> Wisconsin Diagnostic Breast Cancer (WDBC).</li>
+                        <li><strong>Tools Used:</strong> Python, Scikit-learn, Pandas, Matplotlib, Seaborn.</li>
+                        <li><strong>Key Metrics:</strong> Logistic Regression, Random Forest, Support Vector Machine (SVM).</li>
+                    </ul>
                 </section>
 
                 <!-- Key Insights -->
                 <section class="s-project-insights">
-                    <div class="row">
-                        <div class="column xl-12">
-                            <h2>Key Insights</h2>
-                            <ul>
-                                <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
-                                <li>Identified the most important features for classification (e.g., radius, texture).</li>
-                                <li>Visualized the distribution of malignant and benign tumors.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h2>Key Insights</h2>
+                    <ul>
+                        <li>Achieved an accuracy of 98% using a Random Forest classifier.</li>
+                        <li>Identified the most important features for classification (e.g., radius, texture).</li>
+                        <li>Visualized the distribution of malignant and benign tumors.</li>
+                    </ul>
                 </section>
 
                 <!-- Sources -->
                 <section class="s-project-sources">
-                    <div class="row">
-                        <div class="column xl-12">
-                            <h2>Sources</h2>
-                            <ul>
-                                <li><a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)" target="_blank">WDBC Dataset</a></li>
-                                <li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn Documentation</a></li>
-                                <li><a href="https://pandas.pydata.org/" target="_blank">Pandas Documentation</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)" target="_blank">WDBC Dataset</a></li>
+                        <li><a href="https://scikit-learn.org/" target="_blank">Scikit-learn Documentation</a></li>
+                        <li><a href="https://pandas.pydata.org/" target="_blank">Pandas Documentation</a></li>
+                    </ul>
                 </section>
             </div>
 
             <!-- Right Column: Visualizations -->
             <div class="right-column">
                 <section class="s-project-analysis">
-                    <div class="row">
-                        <div class="column xl-12">
-                            <h2>Model Analysis & Results</h2>
-                            
-                            <div class="analysis-steps">
-                                <!-- Data Pipeline Step -->
-                                <div class="analysis-step" data-step="1">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h3>Data Processing Pipeline</h3>
-                                        <p>The breast cancer detection model follows a systematic workflow from data preprocessing to evaluation.</p>
-                                        <div class="visualization-container" 
-                                             id="model-pipeline-diagram"
-                                             data-tooltip="Interactive pipeline diagram - click components for details">
-                                            <div class="viz-caption">Data Processing Workflow</div>
-                                            <!-- Mermaid.js Flowchart -->
-                                            <div class="mermaid">
-                                                flowchart LR
-                                                subgraph Data["Data Preprocessing"]
-                                                    A1[Import Dataset] --> A2[Handle Missing Values]
-                                                    A2 --> A3[One-Hot Encoding]
-                                                    A3 --> A4[Feature Selection]
-                                                    A4 --> A5[Train/Test Split]
-                                                    A5 --> A6[Feature Scaling]
-                                                end
-                                                
-                                                subgraph Models["Model Training"]
-                                                    B1[Logistic Regression] --> B3{Hyperparameter Tuning}
-                                                    B2[Random Forest] --> B3
-                                                    B3 --> B4[Final Model Selection]
-                                                end
-                                                
-                                                subgraph Evaluation["Model Evaluation"]
-                                                    C1[Confusion Matrix] --> C5[Performance Metrics]
-                                                    C2[ROC Curve] --> C5
-                                                    C3[Cross-Validation] --> C5
-                                                    C4[Feature Importance] --> C5
-                                                end
-                                                
-                                                Data --> Models
-                                                Models --> Evaluation
-                                                
-                                                style Data fill:#f5f5f5,stroke:#333,stroke-width:1px
-                                                style Models fill:#e6f7ff,stroke:#333,stroke-width:1px
-                                                style Evaluation fill:#f6ffed,stroke:#333,stroke-width:1px
-                                            </div>
-                                        </div>
+                    <h2>Model Analysis & Results</h2>
+                    
+                    <div class="analysis-steps">
+                        <!-- Data Pipeline Step -->
+                        <div class="analysis-step" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Data Processing Pipeline</h3>
+                                <p>The breast cancer detection model follows a systematic workflow from data preprocessing to evaluation.</p>
+                                <div class="visualization-container" 
+                                     id="model-pipeline-diagram"
+                                     data-tooltip="Interactive pipeline diagram - click components for details">
+                                    <div class="viz-caption">Data Processing Workflow</div>
+                                    <!-- Mermaid.js Flowchart -->
+                                    <div class="mermaid">
+                                        flowchart LR
+                                        subgraph Data["Data Preprocessing"]
+                                            A1[Import Dataset] --> A2[Handle Missing Values]
+                                            A2 --> A3[One-Hot Encoding]
+                                            A3 --> A4[Feature Selection]
+                                            A4 --> A5[Train/Test Split]
+                                            A5 --> A6[Feature Scaling]
+                                        end
+                                        
+                                        subgraph Models["Model Training"]
+                                            B1[Logistic Regression] --> B3{Hyperparameter Tuning}
+                                            B2[Random Forest] --> B3
+                                            B3 --> B4[Final Model Selection]
+                                        end
+                                        
+                                        subgraph Evaluation["Model Evaluation"]
+                                            C1[Confusion Matrix] --> C5[Performance Metrics]
+                                            C2[ROC Curve] --> C5
+                                            C3[Cross-Validation] --> C5
+                                            C4[Feature Importance] --> C5
+                                        end
+                                        
+                                        Data --> Models
+                                        Models --> Evaluation
+                                        
+                                        style Data fill:#f5f5f5,stroke:#333,stroke-width:1px
+                                        style Models fill:#e6f7ff,stroke:#333,stroke-width:1px
+                                        style Evaluation fill:#f6ffed,stroke:#333,stroke-width:1px
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <!-- Feature Analysis Step -->
-                                <div class="analysis-step" data-step="2">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h3>Feature Analysis</h3>
-                                        <p>Feature selection and importance analysis revealed predictive characteristics.</p>
-                                        <div class="visualization-grid">
-                                            <div class="visualization-container" id="feature-importance-visualization">
-                                                <div class="viz-caption">Top 10 Feature Importance - Random Forest Model</div>
-                                                <!-- Feature Importance Chart -->
-                                                <div class="feature-importance-chart">
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">radius_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 100%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">27.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">perimeter_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 92.6%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">25.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">area_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 81.5%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">22.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">concave points_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 66.7%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">18.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">concave points_mean</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 59.3%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">16.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">concavity_mean</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 55.6%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">15.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">texture_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 44.4%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">12.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">area_mean</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 40.7%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">11.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">concavity_worst</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 37.0%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">10.0%</div>
-                                                    </div>
-                                                    <div class="feature-bar">
-                                                        <div class="feature-label">radius_mean</div>
-                                                        <div class="feature-bar-bg">
-                                                            <div class="feature-bar-fill" style="width: 33.3%;"></div>
-                                                        </div>
-                                                        <div class="feature-value">9.0%</div>
-                                                    </div>
-                                                </div>
-                                                <div class="feature-insight">
-                                                    <p>Features like <strong>radius_worst</strong>, <strong>perimeter_worst</strong>, and <strong>area_worst</strong> have the highest influence on breast cancer prediction. These measurements represent the most extreme (largest) values of cell nuclei characteristics.</p>
-                                                </div>
+                        <!-- Feature Analysis Step -->
+                        <div class="analysis-step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Feature Analysis</h3>
+                                <p>Feature selection and importance analysis revealed predictive characteristics.</p>
+                                <div class="visualization-container" id="feature-importance-visualization">
+                                    <div class="viz-caption">Top 10 Feature Importance - Random Forest Model</div>
+                                    <!-- Feature Importance Chart -->
+                                    <div class="feature-importance-chart">
+                                        <div class="feature-bar">
+                                            <div class="feature-label">radius_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 100%;"></div>
                                             </div>
+                                            <div class="feature-value">27.0%</div>
                                         </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">perimeter_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 92.6%;"></div>
+                                            </div>
+                                            <div class="feature-value">25.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">area_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 81.5%;"></div>
+                                            </div>
+                                            <div class="feature-value">22.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">concave points_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 66.7%;"></div>
+                                            </div>
+                                            <div class="feature-value">18.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">concave points_mean</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 59.3%;"></div>
+                                            </div>
+                                            <div class="feature-value">16.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">concavity_mean</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 55.6%;"></div>
+                                            </div>
+                                            <div class="feature-value">15.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">texture_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 44.4%;"></div>
+                                            </div>
+                                            <div class="feature-value">12.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">area_mean</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 40.7%;"></div>
+                                            </div>
+                                            <div class="feature-value">11.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">concavity_worst</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 37.0%;"></div>
+                                            </div>
+                                            <div class="feature-value">10.0%</div>
+                                        </div>
+                                        <div class="feature-bar">
+                                            <div class="feature-label">radius_mean</div>
+                                            <div class="feature-bar-bg">
+                                                <div class="feature-bar-fill" style="width: 33.3%;"></div>
+                                            </div>
+                                            <div class="feature-value">9.0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-insight">
+                                        <p>Features like <strong>radius_worst</strong>, <strong>perimeter_worst</strong>, and <strong>area_worst</strong> have the highest influence on breast cancer prediction. These measurements represent the most extreme (largest) values of cell nuclei characteristics.</p>
                                     </div>
                                 </div>
                             </div>
