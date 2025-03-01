@@ -1,79 +1,6 @@
 @charset "UTF-8";
 
-/* =================================================================== 
- * Hudson Main Stylesheet
- * Template Ver. 1.0.0
- * 04-03-2023
- * ------------------------------------------------------------------
- *
- * TOC:
- * # SETTINGS
- *      ## fonts 
- *      ## colors
- *      ## spacing and typescale
- *      ## grid variables
- * # CSS RESET
- * # GRID
- * # BASE SETUP
- * # UTILITY CLASSES
- * # TYPOGRAPHY 
- *      ## base type styles
- *      ## additional typography & helper classes
- *      ## lists
- *      ## media 
- *      ## spacing
- * # PRELOADER
- *      ## page loaded
- * # FORM 
- *      ## style placeholder text
- * # BUTTONS
- * # TABLE
- * # COMPONENTS
- *      ## pagination
- *      ## alert box 
- *      ## skillbars
- *      ## stats tabs
- * # PROJECT-WIDE SHARED STYLES
- *      ## section header
- *      ## social list
- *      ## swiper overrides
- *      ## glightbox overrides
- * # GRID-BASED LAYOUTS
- *      ## grid block
- *      ## list grid
- * # PAGE WRAP
- * # SITE HEADER
- *      ## logo
- *      ## main navigation
- *      ## mobile menu toggle
- * # INTRO
- *      ## intro content
- *      ## intro btn cv download
- *      ## intro social
- *      ## intro scroll down
- *      ## intro transitions
- * # ABOUT
- *      ## about blocks
- * # WORKS
- *      ## folio entries 
- *      ## testimonials
- * # NUMBERS
- * # FOOTER
- *      ## copyright
- *      ## go top
- *
- * ------------------------------------------------------------------ */
 
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## fonts 
- * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
@@ -4439,5 +4366,33 @@ td:last-child {
 @media screen and (max-width: 400px) {
     .ss-go-top {
         right: -2rem;
+    }
+}
+
+/* Two-Column Layout */
+.two-column-layout {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    margin-top: 20px;
+}
+.left-column {
+    flex: 1; /* Takes up 1 part of the available space */
+}
+.right-column {
+    flex: 2; /* Takes up 2 parts of the available space */
+}
+iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column; /* Stack columns vertically */
+    }
+    .left-column, .right-column {
+        flex: 1; /* Reset flex to take full width */
     }
 }
