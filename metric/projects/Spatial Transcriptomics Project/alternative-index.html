@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Architecture | Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --text-light: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent: #7bdcb5;
+            --cursor-size: 40px;
+            --cursor-dot-size: 8px;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            cursor: none;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: var(--cursor-size);
+            height: var(--cursor-size);
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            pointer-events: none;
+            mix-blend-mode: difference;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+        }
+        
+        .cursor-dot {
+            position: fixed;
+            width: var(--cursor-dot-size);
+            height: var(--cursor-dot-size);
+            border-radius: 50%;
+            background-color: white;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease;
+        }
+        
+        .cursor-active {
+            width: calc(var(--cursor-size) * 1.5);
+            height: calc(var(--cursor-size) * 1.5);
+            background-color: rgba(123, 220, 181, 0.2);
+        }
+        
+        /* Text Effects */
+        .text-stroke {
+            -webkit-text-stroke: 1px var(--text-light);
+            color: transparent;
+        }
+        
+        .split-text {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+        }
+        
+        /* Layout Elements */
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(5, 5, 5, 0.8) 0%, rgba(5, 5, 5, 0.4) 100%);
+        }
+        
+        .image-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            transition: clip-path 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        
+        .gallery-item {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .gallery-item:hover {
+            transform: scale(0.98);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .details-panel {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .details-panel.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                cursor: auto;
+            }
+            
+            .cursor, .cursor-dot {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Back Button -->
+    <div class="fixed top-6 left-6 z-50">
+        <a href="#" class="flex items-center text-gray-400 hover:text-white transition group">
+            <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i>
+            <span class="text-sm uppercase tracking-widest">All Projects</span>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen relative overflow-hidden">
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" 
+                 alt="Nova Architecture" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-6 h-full flex items-center relative z-20 py-32">
+            <div class="w-full md:w-2/3">
+                <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6 leading-tight" id="project-title">
+                    <span class="text-stroke block">Nova</span>
+                    <span class="text-white block">Architecture</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
+                    Redefining urban spaces through sustainable design and innovative materials.
+                </p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center z-20">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-white text-xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <div class="lg:col-span-3">
+                    <div class="flex flex-col md:flex-row gap-8 mb-12">
+                        <div class="md:w-1/3">
+                            <h3 class="text-sm uppercase tracking-widest text-gray-400 mb-4">Details</h3>
+                            <ul class="space-y-4">
+                                <li>
+                                    <span class="block text-gray-400 text-sm">Client</span>
+                                    <span class="text-white">Nova Architecture Group</span>
+                                </li>
+                                <li>
+                                    <span class="block text-gray-400 text-sm">Year</span>
+                                    <span class="text-white">2023</span>
+                                </li>
+                                <li>
+                                    <span class="block text-gray-400 text-sm">Location</span>
+                                    <span class="text-white">Berlin, Germany</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-sm uppercase tracking-widest text-gray-400 mb-4">Description</h3>
+                            <p class="text-gray-300 mb-6">
+                                Nova Architecture approached us to create a digital presence that reflects their innovative approach to sustainable urban design. The challenge was to translate their physical architectural philosophy into a digital experience that maintains their signature aesthetic of clean lines, natural materials, and environmental consciousness.
+                            </p>
+                            <p class="text-gray-300">
+                                Our solution was a modular design system that mirrors their architectural process, with interactive 3D models of their projects, detailed material studies, and a content strategy focused on their sustainability initiatives. The result is a digital platform that serves as both a portfolio and an educational resource for sustainable design.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <span class="px-4 py-2 bg-gray-900 text-gray-300 rounded-full text-sm">Brand Identity</span>
+                        <span class="px-4 py-2 bg-gray-900 text-gray-300 rounded-full text-sm">Web Design</span>
+                        <span class="px-4 py-2 bg-gray-900 text-gray-300 rounded-full text-sm">Art Direction</span>
+                        <span class="px-4 py-2 bg-gray-900 text-gray-300 rounded-full text-sm">3D Visualization</span>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-1 flex justify-end">
+                    <button id="learn-more-btn" class="flex items-center text-gray-400 hover:text-white transition group">
+                        <span class="mr-2 group-hover:mr-4 transition-all">Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Panel (Hidden by default) -->
+    <div id="learn-more-panel" class="details-panel fixed inset-0 bg-gray-900 z-40 p-12 hidden">
+        <div class="container mx-auto h-full flex flex-col">
+            <div class="flex justify-end mb-12">
+                <button id="close-panel-btn" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="flex-grow grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-6">Process</h3>
+                    <p class="text-gray-300">
+                        Our collaboration began with immersive workshops at Nova's Berlin studio, studying their design methodology and material research. We developed a digital language that echoes their physical design principles.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-6">Challenges</h3>
+                    <p class="text-gray-300">
+                        Translating complex architectural concepts into intuitive digital experiences while maintaining load-time performance for high-resolution 3D models and material studies.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-white mb-6">Results</h3>
+                    <p class="text-gray-300">
+                        A 40% increase in client inquiries, recognition in architectural publications for digital innovation, and adoption of our platform as a teaching tool in design schools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Gallery -->
+    <section class="pb-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nova Architecture Exterior" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1617806113563-f537df9651b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nova Architecture Interior" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bf29f3da1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nova Architecture Detail" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item md:col-span-2 aspect-[2/1] overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1600566752227-8f3e8d8d8c8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nova Architecture Wide" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item aspect-square overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Nova Architecture Materials" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item lg:col-span-3 aspect-[3/1] overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80" 
+                         alt="Nova Architecture Panorama" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project Teaser -->
+    <section class="py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <span class="block text-gray-400 text-sm uppercase tracking-widest mb-2">Next Project</span>
+                    <h3 class="text-2xl md:text-4xl font-bold text-white">Oceanic Research Institute</h3>
+                </div>
+                <a href="#" class="flex items-center text-gray-400 hover:text-white transition group">
+                    <span class="mr-2 group-hover:mr-4 transition-all">View Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+        });
+        
+        // Cursor effects
+        document.querySelectorAll('a, button, .gallery-item').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-active');
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-active');
+            });
+        });
+        
+        // Split text animation for project title
+        const projectTitle = document.getElementById('project-title');
+        const titleText = projectTitle.innerText;
+        projectTitle.innerHTML = '';
+        
+        titleText.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.className = 'split-text';
+            span.textContent = char === ' ' ? '&nbsp;' : char;
+            projectTitle.appendChild(span);
+        });
+        
+        gsap.from('.split-text', {
+            duration: 1,
+            y: '100%',
+            opacity: 0,
+            ease: 'power3.out',
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: '.hero-title',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        });
+        
+        // Learn More panel toggle
+        const learnMoreBtn = document.getElementById('learn-more-btn');
+        const closePanelBtn = document.getElementById('close-panel-btn');
+        const learnMorePanel = document.getElementById('learn-more-panel');
+        
+        learnMoreBtn.addEventListener('click', () => {
+            learnMorePanel.classList.remove('hidden');
+            setTimeout(() => {
+                learnMorePanel.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+            }, 10);
+        });
+        
+        closePanelBtn.addEventListener('click', () => {
+            learnMorePanel.classList.remove('visible');
+            setTimeout(() => {
+                learnMorePanel.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 600);
+        });
+        
+        // Gallery item animations
+        gsap.utils.toArray('.gallery-item').forEach((item, i) => {
+            gsap.from(item, {
+                duration: 0.8,
+                y: 50,
+                opacity: 0,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+        
+        // Lazy loading images
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            const lazyLoad = function() {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                
+                const lazyLoadObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            lazyLoadObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(img) {
+                    lazyLoadObserver.observe(img);
+                });
+            };
+            
+            document.addEventListener('DOMContentLoaded', lazyLoad);
+        }
+    </script>
+</body>
+</html>
